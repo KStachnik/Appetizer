@@ -14,6 +14,8 @@
 		41372B002AF15EDE00EDED6D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41372AFA2AF15EDE00EDED6D /* AccountView.swift */; };
 		41372B012AF15EDE00EDED6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41372AFB2AF15EDE00EDED6D /* Assets.xcassets */; };
 		41372B022AF15EDE00EDED6D /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41372AFC2AF15EDE00EDED6D /* OrderView.swift */; };
+		41372B062AF2F6AB00EDED6D /* Appetizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41372B052AF2F6AB00EDED6D /* Appetizer.swift */; };
+		41372B082AF2FEA900EDED6D /* AppetizerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41372B072AF2FEA900EDED6D /* AppetizerListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		41372AFC2AF15EDE00EDED6D /* OrderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		41372B032AF15EEB00EDED6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41372B042AF15EED00EDED6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/Appetizers/Appetizers/Assets.xcassets; sourceTree = "<group>"; };
+		41372B052AF2F6AB00EDED6D /* Appetizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appetizer.swift; sourceTree = "<group>"; };
+		41372B072AF2FEA900EDED6D /* AppetizerListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +65,13 @@
 			children = (
 				41372AFB2AF15EDE00EDED6D /* Assets.xcassets */,
 				41372AEF2AF15E9300EDED6D /* Preview Content */,
-				41372AFA2AF15EDE00EDED6D /* AccountView.swift */,
-				41372AF82AF15EDE00EDED6D /* AppetizerListView.swift */,
-				41372AF92AF15EDE00EDED6D /* AppetizersApp.swift */,
 				41372AF72AF15EDE00EDED6D /* AppetizerTabView.swift */,
+				41372AF82AF15EDE00EDED6D /* AppetizerListView.swift */,
+				41372B072AF2FEA900EDED6D /* AppetizerListCell.swift */,
+				41372AFA2AF15EDE00EDED6D /* AccountView.swift */,
 				41372AFC2AF15EDE00EDED6D /* OrderView.swift */,
+				41372B052AF2F6AB00EDED6D /* Appetizer.swift */,
+				41372AF92AF15EDE00EDED6D /* AppetizersApp.swift */,
 			);
 			path = Appetizer;
 			sourceTree = "<group>";
@@ -151,6 +157,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41372B062AF2F6AB00EDED6D /* Appetizer.swift in Sources */,
+				41372B082AF2FEA900EDED6D /* AppetizerListCell.swift in Sources */,
 				41372B002AF15EDE00EDED6D /* AccountView.swift in Sources */,
 				41372AFF2AF15EDE00EDED6D /* AppetizersApp.swift in Sources */,
 				41372AFD2AF15EDE00EDED6D /* AppetizerTabView.swift in Sources */,
