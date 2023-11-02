@@ -31,7 +31,7 @@ struct AppetizerTabView: View {
                     Text("Order")
                 }
         }
-        .tint(Color("brandPrimary"))
+        .tint(.brandPrimary)
     }
 }
 

@@ -12,20 +12,31 @@ struct AppetizerListView: View {
     @StateObject var vm = AppetizerListViewModel()
     
     var body: some View {
-        NavigationView {
-            List(vm.appetizers) { appetizer in
-                AppetizerListCell(appetizer: appetizer)
+        
+        ZStack {
+            NavigationView {
+                List(vm.appetizers) { appetizer in
+                    AppetizerListCell(appetizer: appetizer)
+                }
+                .navigationTitle("🌭Appetizers")
             }
-            .navigationTitle("🌭Appetizers") 
-        }
-        .onAppear {
-            vm.getAppetizers()
+            .onAppear {
+                vm.getAppetizers()
+            }
+            
+            if vm.isLoading {
+                ProgressView()
+                      .progressViewStyle(CircularProgressViewStyle(tint: .brandPrimary))
+                      .scaleEffect(2.0, anchor: .center)
+            }
+            
         }
         .alert(item: $vm.alertItem){ alertItem in
             Alert(title: alertItem.title,
                   message: alertItem.message,
                   dismissButton: alertItem.dissmissButton)
         }
+        
     }
 }
 
