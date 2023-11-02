@@ -22,7 +22,9 @@ struct AppetizerListView: View {
             vm.getAppetizers()
         }
         .alert(item: $vm.alertItem){ alertItem in
-            Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dissmissButton)
+            Alert(title: alertItem.title,
+                  message: alertItem.message,
+                  dismissButton: alertItem.dissmissButton)
         }
     }
 }
