@@ -21,6 +21,9 @@ struct AppetizerListView: View {
         .onAppear {
             vm.getAppetizers()
         }
+        .alert(item: $vm.alertItem){ alertItem in
+            Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dissmissButton)
+        }
     }
 }
 
