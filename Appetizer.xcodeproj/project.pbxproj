@@ -18,6 +18,9 @@
 		41372B022AF15EDE00EDED6D /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41372AFC2AF15EDE00EDED6D /* OrderView.swift */; };
 		41372B062AF2F6AB00EDED6D /* Appetizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41372B052AF2F6AB00EDED6D /* Appetizer.swift */; };
 		41372B082AF2FEA900EDED6D /* AppetizerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41372B072AF2FEA900EDED6D /* AppetizerListCell.swift */; };
+		4145C71F2AF8489900B7052B /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4145C71E2AF8489900B7052B /* AccountViewModel.swift */; };
+		4145C7222AF84B4600B7052B /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4145C7212AF84B4600B7052B /* String+Ext.swift */; };
+		4145C7242AF84FAE00B7052B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4145C7232AF84FAE00B7052B /* User.swift */; };
 		41C173E12AF5A8B800CACF73 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C173E02AF5A8B800CACF73 /* RemoteImage.swift */; };
 		41C2ADEA2AF4369200E9AE93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41C2ADE92AF4369200E9AE93 /* Assets.xcassets */; };
 		41C2ADEC2AF4371D00E9AE93 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C2ADEB2AF4371D00E9AE93 /* NetworkManager.swift */; };
@@ -39,6 +42,9 @@
 		41372AFC2AF15EDE00EDED6D /* OrderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		41372B052AF2F6AB00EDED6D /* Appetizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appetizer.swift; sourceTree = "<group>"; };
 		41372B072AF2FEA900EDED6D /* AppetizerListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListCell.swift; sourceTree = "<group>"; };
+		4145C71E2AF8489900B7052B /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		4145C7212AF84B4600B7052B /* String+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		4145C7232AF84FAE00B7052B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		41C173E02AF5A8B800CACF73 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		41C2ADE92AF4369200E9AE93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41C2ADEB2AF4371D00E9AE93 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -82,6 +88,7 @@
 		411929772AF6EDE3009860EC /* AccountView */ = {
 			isa = PBXGroup;
 			children = (
+				4145C71E2AF8489900B7052B /* AccountViewModel.swift */,
 				41372AFA2AF15EDE00EDED6D /* AccountView.swift */,
 			);
 			path = AccountView;
@@ -98,6 +105,7 @@
 		411929792AF6EE53009860EC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4145C7202AF84B1A00B7052B /* Extensions */,
 				4119297B2AF6EE9A009860EC /* Alerts */,
 				4119297A2AF6EE64009860EC /* Managers */,
 			);
@@ -125,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				41372B052AF2F6AB00EDED6D /* Appetizer.swift */,
+				4145C7232AF84FAE00B7052B /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +211,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		4145C7202AF84B1A00B7052B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4145C7212AF84B4600B7052B /* String+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,6 +293,7 @@
 				41372B062AF2F6AB00EDED6D /* Appetizer.swift in Sources */,
 				41C2ADEE2AF4388200E9AE93 /* APError.swift in Sources */,
 				41372B082AF2FEA900EDED6D /* AppetizerListCell.swift in Sources */,
+				4145C7222AF84B4600B7052B /* String+Ext.swift in Sources */,
 				411929862AF7041D009860EC /* XDismissButton.swift in Sources */,
 				41C173E12AF5A8B800CACF73 /* RemoteImage.swift in Sources */,
 				41C2ADF02AF445CB00E9AE93 /* AppetizerListViewModel.swift in Sources */,
@@ -283,8 +301,10 @@
 				41372AFF2AF15EDE00EDED6D /* AppetizersApp.swift in Sources */,
 				41C2ADEC2AF4371D00E9AE93 /* NetworkManager.swift in Sources */,
 				411929812AF6F0C2009860EC /* AppetizerDetailView.swift in Sources */,
+				4145C71F2AF8489900B7052B /* AccountViewModel.swift in Sources */,
 				41372AFD2AF15EDE00EDED6D /* AppetizerTabView.swift in Sources */,
 				411929842AF7033A009860EC /* APButton.swift in Sources */,
+				4145C7242AF84FAE00B7052B /* User.swift in Sources */,
 				41C2ADF22AF448AA00E9AE93 /* Alert.swift in Sources */,
 				41372AFE2AF15EDE00EDED6D /* AppetizerListView.swift in Sources */,
 				41372B022AF15EDE00EDED6D /* OrderView.swift in Sources */,
