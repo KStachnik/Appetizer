@@ -85,8 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				41C2ADEF2AF445CB00E9AE93 /* AppetizerListViewModel.swift */,
-				411929802AF6F0C2009860EC /* AppetizerDetailView.swift */,
 				41372AF82AF15EDE00EDED6D /* AppetizerListView.swift */,
+				411929802AF6F0C2009860EC /* AppetizerDetailView.swift */,
 			);
 			path = AppetizerListView;
 			sourceTree = "<group>";
