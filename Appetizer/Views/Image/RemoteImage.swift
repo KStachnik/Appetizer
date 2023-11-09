@@ -8,7 +8,6 @@
 import SwiftUI
 
 final class ImageLoader: ObservableObject {
-    
    @Published var image: Image? = nil
     
     func load(fromURLString urlString: String) {
@@ -23,7 +22,6 @@ final class ImageLoader: ObservableObject {
 }
 
 struct RemoteImage: View {
-    
     var image: Image?
     
     var body: some View {
