@@ -18,7 +18,7 @@ final class NetworkManager {
     private init() {}
     
     
-    func getAppetizers() async throws ->  [Appetizer]{
+    func getAppetizers() async throws ->  [Appetizer] {
         guard let url = URL(string: appetizerURL) else { throw APError.invalidURL }
         
         let (data, response) = try await URLSession.shared.data(from: url)
@@ -36,32 +36,58 @@ final class NetworkManager {
     }
     
     
-    func downloadImage(fromURLString urlString: String, completed: @escaping (UIImage?) -> Void) {
+//    func downloadImage(fromURLString urlString: String, completed: @escaping (UIImage?) -> Void) {
+//        let cacheKey = NSString(string: urlString)
+//        
+//        if let image = cache.object(forKey: cacheKey) {
+//            completed(image)
+//            return
+//        }
+//        
+//        guard let url = URL(string: urlString) else {
+//            completed(nil)
+//            return
+//        }
+//        
+//        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { (data, response, error) in
+//            
+//            guard let data, let image = UIImage(data: data) else {
+//                completed(nil)
+//                return
+//            }
+//            
+//            self.cache.setObject(image, forKey: cacheKey)
+//            completed(image)
+//            
+//        }
+//        
+//        task.resume()
+//    }
+    
+    func downloadImage(fromURLString urlString: String) async throws -> UIImage? {
         let cacheKey = NSString(string: urlString)
         
         if let image = cache.object(forKey: cacheKey) {
-            completed(image)
-            return
+            return image
         }
         
         guard let url = URL(string: urlString) else {
-            completed(nil)
-            return
+            throw APError.invalidURL
         }
         
-        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { (data, response, error) in
-            
-            guard let data, let image = UIImage(data: data) else {
-                completed(nil)
-                return
+        let (data, _) = try await URLSession.shared.data(from: url)
+        
+        do {
+            guard let image = UIImage(data: data) else {
+                throw APError.invalidData
             }
             
-            self.cache.setObject(image, forKey: cacheKey)
-            completed(image)
+            cache.setObject(image, forKey: cacheKey)
             
+            return image
+        } catch {
+            throw APError.unableToComplete
         }
-        
-        task.resume()
     }
     
 }
